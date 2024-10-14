@@ -33,7 +33,8 @@ public class StoreController {
                     required = false
             ) String name
     ){
-        if(!StringUtil.isNullOrEmpty(name)) return null;
+        if(!StringUtil.isNullOrEmpty(name))
+            return storeService.getByContainName(name);
         return storeService.getAll();
     }
     @GetMapping("{id}")

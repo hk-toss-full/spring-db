@@ -5,12 +5,14 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity // 이 obj table 임
 @Table(name = "stores")
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Setter
 public class Store {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
